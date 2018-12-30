@@ -1,0 +1,91 @@
+.section1>div{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+.section1 .text img{
+    margin-left: 40px;
+    opacity: .5;
+}
+.section1.org .text img{
+    transition: all 1s;
+    margin-left: 0;
+    opacity: 1;
+}
+/* 第二屏 */
+.section2>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* 第三章背景图片平移出去旋转回来 */
+.section2 .shield img:nth-child(3){
+    transform: translate(1000px, 800px) rotate(600deg);
+}
+/* 给添加类清除平移出去的距离以及还原位置 */
+.section2.org .shield img:nth-child(3){
+    transition: all 1s;
+   transform: none;
+}
+.section2 .rocket{
+    background: url(../images/circle.png) no-repeat ;
+    width: 453px;
+    height: 449px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.section2 .rocket img{
+ transform: translate(-1200px,800px)
+}
+.section2.org .rocket img{
+    transition: all 1s;
+   transform: none;
+}
+.section4>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.section4 .searchbox{
+  height: 438px;
+  transform: translate(-1000px);
+  
+
+}
+.searchbox .search{
+    background: url(../images/search.png)no-repeat;
+    width: 529px;
+    height: 66px;
+    position: relative;
+    /* transform: translate(-1000px); */
+   
+}
+.searchbox .key{
+    background: url(../images/key.png)no-repeat;
+    width: 0px;
+    height: 22px;
+    position: absolute;
+   left: 20px;
+   top: 22px;
+ 
+}
+.searchbox .result{
+    background: url(../images/result.png)no-repeat;
+    width: 529px;
+    height: 0px;
+}
+.section4.org .searchbox{
+    transition: all 1s;
+    transform: none;
+}
+
+.section4.org .key{
+    transition: all 1s 1s steps(5);
+    width: 99px;
+}
+.section4.org .result{
+    transition: all 1s 2s ;
+    height: 372px;
+}
